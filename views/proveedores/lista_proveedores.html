@@ -1,0 +1,27 @@
+$def with(proveedores)
+
+<h1>Lista proveedores</h1>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Nombre Empresa</th>
+        <th>Correo</th>
+        <th>Telefono</th>
+        <th>Ciudad</th>
+        <th>Ver</th>
+        <th>Editar</th>
+        <th>Borrar</th>
+    </tr>
+    $for proveedor in proveedores:
+        <tr>
+            <td>$contacto['id_proveedor']</td>
+            <td>$contacto['nombre_empresa']</td>
+            <td>$contacto['correo']</td>
+            <td>$contacto['telefono']</td>
+            <td>$contacto['ciudad']</td>
+            <td><a href="/ver_proveedor/$proveedor['id_proveedor']">Ver</td>
+            <td><a href="/editar_proveedor/$proveedor['id_proveedor']">Editar</td>
+            <td><a href="/borrar_proveedor/$proveedor['id_proveedor']">Borrar</td>
+        </tr>
+</table>
