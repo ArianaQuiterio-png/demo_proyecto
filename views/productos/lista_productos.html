@@ -1,0 +1,24 @@
+$def with(productos)
+
+<h1>lista_productos</h1>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Stock</th>
+        <th>Descripcion</th>
+        <th>Precio</th>
+    </tr>
+    $for prodcutos in productos:
+        <tr>
+            <td>$productos['id_contacto']</td>
+            <td>$procutos['nombre']</td>
+            <td>$prodcutos['Stock]</td>
+            <td>$prodcutos['Descripcion']</td>
+            <td>$productos['Precio']</td>
+            <td><a href="/editar_producto/$prodcuto'id_contacto']">Editar</td>
+            <td><a href="/eliminar_prodcuto/$prodcuto['id_contacto']">Borrar</td> 
+            <td><a href="nuevo_producto">Nuevo prodcuto</a></td>   
+        </tr>
+</table>
