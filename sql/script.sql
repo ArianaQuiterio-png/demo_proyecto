@@ -1,4 +1,4 @@
-CREATE TABLE clientes(
+CREATE TABLE IF NOT EXISTS clientes (
     id_cliente INTEGER PRIMARY KEY AUTOINCREMENT,
     nombre TEXT NOT NULL,
     primer_apellido TEXT NOT NULL,
@@ -6,7 +6,7 @@ CREATE TABLE clientes(
     telefono TEXT NOT NULL
 );
 
-CREATE TABLE proveedores(
+CREATE TABLE IF NOT EXISTS proveedores (
     id_proveedor INTEGER PRIMARY KEY AUTOINCREMENT,
     nombre_empresa TEXT NOT NULL,
     correo TEXT NOT NULL,
@@ -14,22 +14,22 @@ CREATE TABLE proveedores(
     ciudad TEXT NOT NULL
 );
 
-CREATE TABLE productos(
+CREATE TABLE IF NOT EXISTS productos (
     id_producto INTEGER PRIMARY KEY AUTOINCREMENT,
     nombre TEXT NOT NULL,
     stock INTEGER NOT NULL,
     descripcion TEXT NOT NULL,
-    precio FLOAT NOT NULL
+    precio REAL NOT NULL
 );
 
-INSERT INTO clientes(nombre, primer_apellido, segundo_apellido, telefono)
-VALUES 
-('Angel','Escorcia','Quiterio','111111111');
-
-INSERT INTO proveedores(nombre_empresa, correo, telefono, ciudad)
+INSERT INTO clientes (nombre, primer_apellido, segundo_apellido, telefono)
 VALUES
-('Truper', 'truper@mail', '222222222', 'Mexico');
+('Angel', 'Escorcia', 'Quiterio', '111111111');
 
-INSERT INTO productos(nombre, stock, descripcion, precio)
+INSERT INTO proveedores (nombre_empresa, correo, telefono, ciudad)
 VALUES
-('Martillo', 32, 'Cabeza de acero y mango de madera', 150);
+('Truper', 'truper@mail.com', '222222222', 'Mexico');
+
+INSERT INTO productos (nombre, stock, descripcion, precio)
+VALUES
+('Martillo', 32, 'Cabeza de acero y mango de madera', 150.00);
