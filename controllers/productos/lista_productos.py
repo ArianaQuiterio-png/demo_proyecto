@@ -7,7 +7,7 @@ db = web.database(
     db='sql/ferreteria.db'
 )
 
-class VerProductos:
+class ListaProductos:
     def GET(self):
         productos = db.select('productos')
-        return render.ver_productos(productos)
+        return render.productos.ver_productos(productos)

@@ -1,0 +1,24 @@
+$def with(producto, mensaje)
+
+<h2>Eliminar Producto</h2>
+
+$if mensaje:
+    <p>$mensaje</p>
+
+<form method="POST">
+
+ID:<br>
+<input type="text" value="$producto['id_producto']" readonly><br><br>
+
+Nombre:<br>
+<input type="text" value="$producto['nombre']" readonly><br><br>
+
+<input type="submit" value="Eliminar">
+
+</form>
+
+<br>
+
+<a href="/lista_productos">
+    <button>Cancelar</button>
+</a>

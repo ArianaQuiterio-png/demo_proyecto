@@ -1,17 +1,20 @@
-<h1>Nuevo Producto</h1>
+$def with()
+
+<h2>Nuevo Producto</h2>
 
 <form method="POST">
-    <p>Nombre</p>
-    <input type="text" name="nombre">
-    <p>Stock</p>
-    <input type="text" name="stock">
-    <p>Descripcion</p>
-    <input type="text" name="descripcion">
-    <p>Precio</p>
-    <input type="precio" name="precio">
-    <br>
-    <input type="submit" value="Guardar">
+Nombre:<br>
+<input type="text" name="nombre"><br><br>
+Stock:<br>
+<input type="number" name="stock"><br><br>
+Descripción:<br>
+<input type="text" name="descripcion"><br><br>
+Precio:<br>
+<input type="text" name="precio"><br><br>
+<input type="submit" value="Guardar">
 </form>
 <br>
 
-<a href="/lista_prodcuto">Regresar</a>
+<a href="/lista_productos">
+    <button>Regresar</button>
+</a>
