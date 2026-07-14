@@ -1,0 +1,29 @@
+$def with(cliente, mensaje)
+<h1>Borrar CLIENTE</h1>
+
+$if mensaje is not None:
+    <h1>$mensaje</h1>
+
+$if cliente == {}:
+    <h1>Ups, no existe este cliente</h1>
+    <a href="/lista_clientes"><button type="button">Regresar</button></a>
+$else:
+    <form method="post">
+        <label for="id_cliente">ID:</label>
+        <input type="text" id="id_cliente" name="id_cliente" value="$cliente['id_cliente']" readonly><br><br>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" value="$cliente['nombre']" readonly><br><br>
+
+        <label for="primer_apellido">Primer Apellido:</label>
+        <input type="text" id="primer_apellido" name="primer_apellido" value="$cliente['primer_apellido']" readonly><br><br>
+
+        <label for="segundo_apellido">Segundo Apellido:</label>
+        <input type="text" id="segundo_apellido" name="segundo_apellido" value="$cliente['segundo_apellido']" readonly><br><br>
+
+        <label for="telefono">Telefono:</label>
+        <input type="text" id="telefono" name="telefono" value="$cliente['telefono']" readonly><br><br>
+
+        <a href="/lista_clientes"><button type="button">Regresar</button></a>
+        <button type="submit" name="borrar">Borrar</button>
+    </form>

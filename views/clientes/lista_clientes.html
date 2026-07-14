@@ -1,0 +1,28 @@
+$def with(clientes)
+
+<h1>Lista clientes</h1>
+<a href="/insertar_cliente"><button name="nuevo">Nuevo</button></a>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Primer Apellido</th>
+        <th>Segundo Apellido</th>
+        <th>Telefono</th>
+        <th>Ver</th>
+        <th>Editar</th>
+        <th>Borrar</th>
+    </tr>
+    $for cliente in clientes:
+    <tr>
+        <td>$cliente['id_cliente']</td>
+        <td>$cliente['nombre']</td>
+        <td>$cliente['primer_apellido']</td>
+        <td>$cliente['segundo_apellido']</td>
+        <td>$cliente['telefono']</td>
+        <td><a href="/ver_cliente/$cliente['id_cliente']">Ver</a></td>
+        <td><a href="/editar_cliente/$cliente['id_cliente']">Editar</a></td>
+        <td><a href="/borrar_cliente/$cliente['id_cliente']">Borrar</a></td>
+    </tr>
+</table>

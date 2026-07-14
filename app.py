@@ -10,14 +10,14 @@ urls = (
     '/editar_proveedor/(.*)', 'controllers.proveedores.editar_proveedor.EditarProveedor',
 
     #Rutas para el modulo clientes
-    '/clientes', 'controllers.clientes.lista_clientes.ListaClientes',
+    '/lista_clientes', 'controllers.clientes.lista_clientes.ListaClientes',
     '/insertar_cliente', 'controllers.clientes.insertar_cliente.InsertarCliente',
     '/ver_cliente/(.*)', 'controllers.clientes.ver_cliente.VerCliente', 
     '/borrar_cliente/(.*)', 'controllers.clientes.borrar_cliente.BorrarCliente',
     '/editar_cliente/(.*)', 'controllers.clientes.editar_cliente.EditarCliente',
 
     #Rutas para el modulo productos
-    '/productos', 'controllers.productos.lista_productos.ListaProductos',
+    '/lista_productos', 'controllers.productos.lista_productos.ListaProductos',
     '/insertar_producto', 'controllers.productos.insertar_producto.InsertarProducto',
     '/ver_producto/(.*)', 'controllers.productos.ver_producto.VerProductos', 
     '/borrar_producto/(.*)', 'controllers.productos.borrar_producto.BorrarProducto',
