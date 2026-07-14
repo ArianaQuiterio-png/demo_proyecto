@@ -1,6 +1,7 @@
 $def with(proveedores)
 
 <h1>Lista proveedores</h1>
+<a href="/insertar_proveedor"><button name="nuevo">Nuevo</button></a>
 
 <table border="1">
     <tr>
@@ -15,13 +16,13 @@ $def with(proveedores)
     </tr>
     $for proveedor in proveedores:
         <tr>
-            <td>$contacto['id_proveedor']</td>
-            <td>$contacto['nombre_empresa']</td>
-            <td>$contacto['correo']</td>
-            <td>$contacto['telefono']</td>
-            <td>$contacto['ciudad']</td>
-            <td><a href="/ver_proveedor/$proveedor['id_proveedor']">Ver</td>
-            <td><a href="/editar_proveedor/$proveedor['id_proveedor']">Editar</td>
-            <td><a href="/borrar_proveedor/$proveedor['id_proveedor']">Borrar</td>
+            <td>$proveedor['id_proveedor']</td>
+            <td>$proveedor['nombre_empresa']</td>
+            <td>$proveedor['correo']</td>
+            <td>$proveedor['telefono']</td>
+            <td>$proveedor['ciudad']</td>
+            <td><a href="/ver_proveedor/$proveedor['id_proveedor']">Ver</a></td>
+            <td><a href="/editar_proveedor/$proveedor['id_proveedor']">Editar</a></td>
+            <td><a href="/borrar_proveedor/$proveedor['id_proveedor']">Borrar</a></td>
         </tr>
 </table>

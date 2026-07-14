@@ -1,17 +1,17 @@
 import web
 import sqlite3
 
-render = web.template.render('views', base='layout')
+render = web.template.render('views/proveedores', base='../layout')
 
-class VerPoveedor:
+class VerProveedor:
 
-    def buscarProveedor(self, id_proveedores:int):
+    def buscarProveedor(self, id_proveedor:int):
         try:
-            conexion = sqlite3.connect("sql/agenda.db")
+            conexion = sqlite3.connect("sql/ferreteria.db")
             conexion.row_factory = sqlite3.Row
             cursor = conexion.cursor()
-            query = "SELECT * FROM contactos WHERE id_proveedores = ?"
-            cursor.execute(query,(id_proveedores,))
+            query = "SELECT * FROM proveedores WHERE id_proveedor = ?"
+            cursor.execute(query,(id_proveedor,))
             resultado = cursor.fetchone()
 
             proveedor = {

@@ -1,21 +1,28 @@
 $def with(proveedor)
+<h1>Editar proveedor</h1>
 
-<form  method="post">
-    <label for="id_proveedor">ID:</label>
-    <input type="text" id="id_proveedor" name="id_proveedor" value=$proveedor['id_proveedor'] readonly><br><br>
+$if proveedor == {}:
+    <h1>Ups, no existe este proveedor</h1>
+    <a href="/lista_proveedor"><button type="button">Regresar</button></a>
 
-    <label for="nombre_empresa">Nombre Empresa:</label>
-    <input type="text" id="nombre_empresa" name="nombre_empresa" value=$proveedor['nombre_empresa'] readonly><br><br>
+$else:
+    <form  method="post">
+        <label for="id_proveedor">ID:</label>
+        <input type="text" id="id_proveedor" name="id_proveedor" value=$proveedor['id_proveedor'] readonly><br><br>
 
-    <label for="correo">Correo:</label>
-    <input type="text" id="correo" name="correo" value=$proveedor['correo'] readonly><br><br>
+        <label for="nombre_empresa">Nombre Empresa:</label>
+        <input type="text" id="nombre_empresa" name="nombre_empresa" value=$proveedor['nombre_empresa']><br><br>
 
-    <label for="telefono">Telefono:</label>
-    <input type="text" id="telefono" name="telefono" value=$proveedor['telefono'] readonly><br><br>
+        <label for="correo">Correo:</label>
+        <input type="text" id="correo" name="correo" value=$proveedor['correo']><br><br>
 
-    <label for="ciudad">Ciudad:</label>
-    <input type="text" id="ciudad" name="ciudad" value=$proveedor['ciudad'] readonly><br><br>
+        <label for="telefono">Telefono:</label>
+        <input type="text" id="telefono" name="telefono" value=$proveedor['telefono']><br><br>
+
+        <label for="ciudad">Ciudad:</label>
+        <input type="text" id="ciudad" name="ciudad" value=$proveedor['ciudad']><br><br>
 
 
-    <a href="/lista_proveedores"><button type="button">Regresar</button></a>
+        <a href="/lista_proveedores"><button type="button">Regresar</button></a>
+        <button type="submit" name="editar">Editar</button>
 </form>

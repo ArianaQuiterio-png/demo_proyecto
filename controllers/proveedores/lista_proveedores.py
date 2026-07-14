@@ -1,13 +1,13 @@
 import web
 import sqlite3
 
-render = web.template.render('views', base='layout')
+render = web.template.render('views/proveedores', base='../layout')
 
 class ListaProveedores:
 
     def consultarProveedores(self):
         try:
-            conexion = sqlite3.connect("sql/agenda.db")
+            conexion = sqlite3.connect("sql/ferreteria.db")
             conexion.row_factory = sqlite3.Row
             cursor = conexion.cursor()
             query = "SELECT * FROM proveedores;"
@@ -21,7 +21,7 @@ class ListaProveedores:
                     "nombre_empresa":fila[1],
                     "correo":fila[2],
                     "telefono":fila[3],
-                    "ciuddad":fila[4],
+                    "ciudad":fila[4],
                 }
                 datos.append(proveedor)
 

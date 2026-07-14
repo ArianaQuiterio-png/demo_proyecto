@@ -1,15 +1,18 @@
-<h1>Nuevo Proveedor</h1>
-<form method="POST">
-    <p>Nombre Empresa</p>
-    <input type="text" name="nombre_empresa">
-    <p>Correo</p>
-    <input type="email" name="correo">
-    <p>Telefono</p>
-    <input type="text" name="telefono">
-    <p>Ciudad</p>
-    <input type="text" name="ciudad">
-    <br><br>
-    <input type="submit" value="Guardar">
+<h1>Insertar proveedor</h1>
+
+<form  method="post">
+    <label for="nombre_empresa">Nombre Empresa:</label>
+    <input type="text" id="nombre_empresa" name="nombre_empresa"><br><br>
+
+    <label for="correo">Correo:</label>
+    <input type="text" id="correo" name="correo"><br><br>
+
+    <label for="telefono">Telefono:</label>
+    <input type="text" id="telefono" name="telefono"><br><br>
+
+    <label for="ciudad">Ciudad:</label>
+    <input type="text" id="ciudad" name="ciudad"><br><br>
+
+    <a href="/lista_proveedores"><button type="button">Regresar</button></a>
+    <button name="insertar">Guardar</button>
 </form>
-<br>
-<a href="/">Regresar</a>
